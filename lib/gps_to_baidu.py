@@ -1,5 +1,5 @@
 # coding=utf-8
-from gps_get import gps_inof
+from gpsGet import gps_inof
 import requests
 import time
 
