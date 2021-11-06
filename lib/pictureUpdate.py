@@ -59,6 +59,7 @@ def socket_client():
     # os.remove(file_path)
     s.close()
 
-
+'''
 if __name__ == '__main__':
     socket_client()
+'''
