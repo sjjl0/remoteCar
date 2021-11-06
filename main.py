@@ -5,10 +5,10 @@ import lib.basicMovement as move
 import lib.pictureGet as photo
 import lib.gpsGet as gps
 
-
 # 初始参数
 speed = 50
 moveTime = 2
+
 
 # webSocket的处理函数
 def on_message(self, message):
@@ -78,7 +78,10 @@ def on_message(self, message):
 
     if "changeSpeed" in message:
         m = message.split(" ")
-        speed = int(m[1])
+        if len(m) <= 1:
+            speed = 50
+        else:
+            speed = int(m[1])
         ws.send('ok')
         default = False
         return
